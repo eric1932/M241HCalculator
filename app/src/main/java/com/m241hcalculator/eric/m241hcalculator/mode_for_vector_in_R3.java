@@ -8,12 +8,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class mode_for_vectors_in_R3 extends AppCompatActivity {
+public class mode_for_vector_in_R3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mode_for_vectors_in__r3);
+        setContentView(R.layout.activity_mode_for_vector_in_r3);
     }
 
     public void calculate_reveal() {

@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:onClick="onClickA"
-        android:text="@string/mod_of_two_vectors_in_r3"
+        android:text="@string/mode_of_vector_in_r3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonB" />

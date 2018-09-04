@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickA (View v) {
-        Intent intent = new Intent(this,mode_for_vectors_in_R3.class);
+        Intent intent = new Intent(this,mode_for_vector_in_R3.class);
         startActivity(intent);
     }
 

@@ -2,7 +2,7 @@
     <string name="app_name">M241H Calculator</string>
     <string name="vector_a">Vector A</string>
     <string name="vector_b">Vector B</string>
-    <string name="mod_of_two_vectors_in_r3">mod of two vectors in R^3</string>
+    <string name="mode_of_vector_in_r3">Mode of vector in R^3</string>
     <string name="calculate">Calculate</string>
     <string name="clear">Clear</string>
     <string name="cross_product_name">Cross Product of Vectors in R^3</string>

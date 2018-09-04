@@ -16,8 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".mode_for_vectors_in_R3" />
-        <activity android:name=".CrossProductOfVectorsInR3"></activity>
+        <activity android:name=".mode_for_vector_in_R3"
+            android:label="@string/mode_of_vector_in_r3" />
+        <activity android:name=".CrossProductOfVectorsInR3"
+            android:label="@string/cross_product_name" />
     </application>
 
 </manifest>
