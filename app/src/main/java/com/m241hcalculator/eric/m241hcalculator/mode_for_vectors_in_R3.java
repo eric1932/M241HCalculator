@@ -10,9 +10,6 @@ import android.widget.Toast;
 
 public class mode_for_vectors_in_R3 extends AppCompatActivity {
 
-    static EditText ai, aj, ak, bi, bj, bk;
-    static int int_ai, int_aj, int_ak, int_bi, int_bj, int_bk;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,27 +17,28 @@ public class mode_for_vectors_in_R3 extends AppCompatActivity {
     }
 
     public void calculate_reveal() {
-        int_ai = Integer.parseInt(ai.getText().toString());
-        int_aj = Integer.parseInt(aj.getText().toString());
-        int_ak = Integer.parseInt(ak.getText().toString());
-        int_bi = Integer.parseInt(bi.getText().toString());
-        int_bj = Integer.parseInt(bj.getText().toString());
-        int_bk = Integer.parseInt(bk.getText().toString());
+        EditText ai = findViewById(R.id.vector_a_i);
+        EditText aj = findViewById(R.id.vector_a_j);
+        EditText ak = findViewById(R.id.vector_a_k);
+        int int_ai = Integer.parseInt(ai.getText().toString());
+        int int_aj = Integer.parseInt(aj.getText().toString());
+        int int_ak = Integer.parseInt(ak.getText().toString());
 
-        double result = Math.pow(Math.pow(int_ai, 2) + Math.pow(int_aj, 2) + Math.pow(int_ak, 2) + Math.pow(int_bi, 2) + Math.pow(int_bj, 2) + Math.pow(int_bk, 2), 0.5);
+        double result = Math.pow(
+                Math.pow(int_ai, 2)
+                + Math.pow(int_aj, 2)
+                + Math.pow(int_ak, 2)
+                , 0.5);
 
         TextView text_result = findViewById(R.id.result);
         text_result.setText(String.valueOf(String.valueOf(result)));
     }
 
     public void review(View v) {
-        ai = findViewById(R.id.vector_a_i);
-        aj = findViewById(R.id.vector_a_j);
-        ak = findViewById(R.id.vector_a_k);
-        bi = findViewById(R.id.vector_b_i);
-        bj = findViewById(R.id.vector_b_j);
-        bk = findViewById(R.id.vector_b_k);
-        EditText vectors[] = {ai, aj, ak, bi, bj, bk};
+        EditText ai = findViewById(R.id.vector_a_i);
+        EditText aj = findViewById(R.id.vector_a_j);
+        EditText ak = findViewById(R.id.vector_a_k);
+        EditText vectors[] = {ai, aj, ak};
 
         for (EditText i : vectors) {
             if (i == null || i.getText().toString().length() == 0) {
@@ -68,13 +66,13 @@ public class mode_for_vectors_in_R3 extends AppCompatActivity {
     }
 
     public void onClickClear(View v) {
+        EditText ai = findViewById(R.id.vector_a_i);
+        EditText aj = findViewById(R.id.vector_a_j);
+        EditText ak = findViewById(R.id.vector_a_k);
         ai = findViewById(R.id.vector_a_i);
         aj = findViewById(R.id.vector_a_j);
         ak = findViewById(R.id.vector_a_k);
-        bi = findViewById(R.id.vector_b_i);
-        bj = findViewById(R.id.vector_b_j);
-        bk = findViewById(R.id.vector_b_k);
-        EditText vectors[] = {ai, aj, ak, bi, bj, bk};
+        EditText vectors[] = {ai, aj, ak};
 
         for (EditText x : vectors) {
             x.setText("");
