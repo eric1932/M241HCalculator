@@ -23,7 +23,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="i"
+        android:hint="@string/i"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_va" />
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:ems="10"
-        android:hint="j"
+        android:hint="@string/j"
         android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/B_ai"
         app:layout_constraintStart_toEndOf="@+id/B_ai" />
@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:ems="10"
-        android:hint="k"
+        android:hint="@string/k"
         android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/B_aj"
         app:layout_constraintStart_toEndOf="@+id/B_aj" />
@@ -67,7 +67,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="i"
+        android:hint="@string/i"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_vb" />
@@ -78,7 +78,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:ems="10"
-        android:hint="j"
+        android:hint="@string/j"
         android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/B_bi"
         app:layout_constraintStart_toEndOf="@+id/B_bi" />
@@ -89,7 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:ems="10"
-        android:hint="k"
+        android:hint="@string/k"
         android:inputType="number"
         app:layout_constraintBaseline_toBaselineOf="@+id/B_bj"
         app:layout_constraintStart_toEndOf="@+id/B_bj" />
@@ -112,7 +112,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="  "
+        android:text="@string/blank"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,7 +123,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="  "
+        android:text="@string/blank"
         android:textSize="36sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -136,7 +136,7 @@
         android:layout_marginStart="8dp"
         android:onClick="onClickClear"
         android:text="@string/clear"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintBaseline_toBaselineOf="@+id/buttonBCal"
         app:layout_constraintStart_toEndOf="@+id/buttonBCal" />
 

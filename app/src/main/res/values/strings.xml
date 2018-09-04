@@ -6,4 +6,8 @@
     <string name="calculate">Calculate</string>
     <string name="clear">Clear</string>
     <string name="cross_product_name">Cross Product of Vectors in R^3</string>
+    <string name="blank">"  "</string>
+    <string name="i">i</string>
+    <string name="j">j</string>
+    <string name="k">k</string>
 </resources>
