@@ -9,9 +9,6 @@ import android.widget.Toast;
 
 public class CrossProductOfVectorsInR3 extends AppCompatActivity {
 
-    private static TextView ai, aj, ak, bi, bj, bk;
-    private static TextView vectors_textview[];
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,14 +16,15 @@ public class CrossProductOfVectorsInR3 extends AppCompatActivity {
     }
 
     public void onClickCal(View v) {
-        ai = findViewById(R.id.B_ai);
-        aj = findViewById(R.id.B_aj);
-        ak = findViewById(R.id.B_ak);
-        bi = findViewById(R.id.B_bi);
-        bj = findViewById(R.id.B_bj);
-        bk = findViewById(R.id.B_bk);
+        TextView ai = findViewById(R.id.B_ai),
+                aj = findViewById(R.id.B_aj),
+                ak = findViewById(R.id.B_ak),
+                bi = findViewById(R.id.B_bi),
+                bj = findViewById(R.id.B_bj),
+                bk = findViewById(R.id.B_bk);
         //没搞明白
-        vectors_textview = new TextView[]{ai, aj, ak, bi, bj, bk};
+        //vectors_textview = new TextView[]{ai, aj, ak, bi, bj, bk};
+        TextView vectors_textview[] = {ai, aj, ak, bi, bj, bk};
 
         for (TextView i : vectors_textview) {
             if (i == null || i.getText().toString().length() == 0) {
@@ -68,11 +66,21 @@ public class CrossProductOfVectorsInR3 extends AppCompatActivity {
     }
 
     public void onClickClear(View v) {
+
+        //防崩溃
+        TextView ai = findViewById(R.id.B_ai),
+                aj = findViewById(R.id.B_aj),
+                ak = findViewById(R.id.B_ak),
+                bi = findViewById(R.id.B_bi),
+                bj = findViewById(R.id.B_bj),
+                bk = findViewById(R.id.B_bk);
+        TextView vectors_textview[] = {ai, aj, ak, bi, bj, bk};
+
         for (TextView x : vectors_textview) {
             x.setText("");
         }
-        ((TextView) findViewById(R.id.textViewB_result)).setText("");
-        ((TextView) findViewById(R.id.textViewB_result_vector)).setText("");
+        ((TextView) findViewById(R.id.textViewB_result)).setText(getString(R.string.blank));
+        ((TextView) findViewById(R.id.textViewB_result_vector)).setText(getString(R.string.blank));
         //if Cal is disabled
         if (!findViewById(R.id.buttonBCal).isEnabled()) {
             findViewById(R.id.buttonBCal).setEnabled(true);

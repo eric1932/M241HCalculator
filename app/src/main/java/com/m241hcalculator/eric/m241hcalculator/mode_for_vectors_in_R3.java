@@ -41,6 +41,7 @@ public class mode_for_vectors_in_R3 extends AppCompatActivity {
         bj = findViewById(R.id.vector_b_j);
         bk = findViewById(R.id.vector_b_k);
         EditText vectors[] = {ai, aj, ak, bi, bj, bk};
+
         for (EditText i : vectors) {
             if (i == null || i.getText().toString().length() == 0) {
                 Log.d("review_logd", "return because of null/0");
@@ -58,6 +59,12 @@ public class mode_for_vectors_in_R3 extends AppCompatActivity {
         //ijks are all 0-9 numbers
         Log.d("review_logd", "continue to calculate");
         calculate_reveal();
+
+        //禁止修改
+        findViewById(R.id.buttonACal).setEnabled(false);
+        for (EditText x : vectors) {
+            x.setEnabled(false);
+        }
     }
 
     public void onClickClear(View v) {
@@ -68,9 +75,16 @@ public class mode_for_vectors_in_R3 extends AppCompatActivity {
         bj = findViewById(R.id.vector_b_j);
         bk = findViewById(R.id.vector_b_k);
         EditText vectors[] = {ai, aj, ak, bi, bj, bk};
+
         for (EditText x : vectors) {
             x.setText("");
         }
-        ((TextView) findViewById(R.id.result)).setText("  ");
+        ((TextView) findViewById(R.id.result)).setText(getString(R.string.blank));
+        if (!findViewById(R.id.buttonACal).isEnabled()) {
+            findViewById(R.id.buttonACal).setEnabled(true);
+        }
+        for (EditText x : vectors) {
+            x.setEnabled(true);
+        }
     }
 }
